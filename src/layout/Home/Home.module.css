@@ -1,0 +1,25 @@
+#home {
+  padding: 150px 0;
+}
+
+#home > h2 {
+  color: var(--primary-color);
+}
+
+.homeText {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.pagination__wrap {
+  display: inline-flex;
+  padding: 1rem 0;
+  margin: 2rem 0;
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+}
+.uiWrap {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}

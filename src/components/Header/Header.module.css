@@ -1,0 +1,29 @@
+header {
+  background: lightblue;
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 2;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__cart {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.header__cart svg {
+  font-size: 45px;
+}
+
+.cart__wrapper{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}

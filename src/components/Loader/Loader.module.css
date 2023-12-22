@@ -1,0 +1,59 @@
+.loaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Фиксированное позиционирование на всю страницу */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  z-index: 1000; /* Убедитесь, что loader находится выше всех элементов */
+}
+
+.loader {
+  width: 40px;
+  height: 98px;
+  display: inline-block;
+  position: relative;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  color: rgba(255, 61, 0, 0.9);
+  border-radius: 20px 20px 4px 4px;
+  background: #fff;
+  animation: fill 2s linear infinite alternate;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -95%);
+  border: 2px solid #fff;
+  border-bottom: none;
+  background: #fff;
+  width: 15px;
+  height: 35px;
+  animation: fillNeck 2s linear infinite alternate;
+}
+
+@keyframes fill {
+  0% {
+    box-shadow: 0 0 inset;
+  }
+  50%,
+  100% {
+    box-shadow: 0 -98px inset;
+  }
+}
+
+@keyframes fillNeck {
+  0%,
+  50% {
+    box-shadow: 0 0 inset;
+  }
+  100% {
+    box-shadow: 0 -20px inset;
+  }
+}
